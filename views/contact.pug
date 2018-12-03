@@ -1,0 +1,17 @@
+extends layout.pug
+ 
+block title
+  <title>#{title}</title>
+ 
+block content
+      
+  <h1>#{title} in Kaliningrad</h1>
+  if emailsVisible
+    <h3>Emails of company:</h3>
+    <ul>
+      each email in emails
+        <li>#{email}</li>
+    </ul>
+  else
+    <h3>Email is empty</h3>
+  <p>Tel: #{phone}</p>
